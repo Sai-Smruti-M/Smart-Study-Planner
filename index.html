@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <div class="nav-sidebar">
+            <h2>Planner Menu</h2>
+            <nav>
+                <a href="#dashboard" class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-plus-circle"></i> Add Task
+                </a>
+                <a href="#upcoming" class="nav-item" data-page="upcoming">
+                    <i class="fas fa-list-check"></i> Upcoming Tasks
+                </a>
+                <a href="#completed" class="nav-item" data-page="completed">
+                    <i class="fas fa-check-double"></i> Completed Tasks
+                </a>
+            </nav>
+        </div>
+
+        <div class="content-area">
+            
+            <div id="dashboard-page" class="page-view active-page">
+                <div class="planner-container">
+                    <h1>Smart Study Planner</h1>
+                    <h2 class="dashboard-subtitle">Dashboard</h2>
+                    <p class="subtitle">Add your study goals here, and we'll prioritize them for you.</p>
+
+                    <div class="task-input-section">
+                        <input type="text" id="task-name" placeholder="Enter study task...">
+                        <input type="date" id="task-due-date">
+                        <input type="number" id="task-time" placeholder="Est. time (min)">
+                        <button id="add-task-btn">Add Task</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="upcoming-page" class="page-view">
+                <h1 class="page-header">Priority Study Schedule</h1>
+                <div id="priority-message" class="priority-message"></div>
+                <ul id="upcoming-tasks-list"></ul>
+            </div>
+
+            <div id="completed-page" class="page-view">
+                <h1 class="page-header">Completed Tasks Log</h1>
+                <ul id="completed-tasks-list"></ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
